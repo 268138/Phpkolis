@@ -1,0 +1,199 @@
+PHP(STAYIN ALIVE)
+labutis NIEKAS NETURI 7-3?
+
+
+7varianto uzduotis VEIKIA u are amazing! <3
+<!DOCTYPE HTML>
+<html lang="lt">
+	<head>
+		<title>1.</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+     
+	 <h1>Skaiciu sekos analize</h1> 
+	 <h2>Sugeneruota skaiciu seka:</h2>
+	 <?php
+		$kiek = rand(9, 9);
+		$sk = array(); // sukuriamas tuscias masyvas
+        $Priekis = array();
+        $Vidurys = array();
+        $Galas = array();
+		for($i = 0; $i < $kiek; $i++){
+			$sk[$i] = rand(10, 100);
+		}
+		echo ' <p>';
+		for($i = 0; $i < $kiek; $i++){
+			echo $sk[$i].'; ';
+		}
+		echo '<br> Is viso '.$kiek.' sekos nariu </p>';
+	 ?>
+     <h2>Ar suma yra lygine...</h2>
+	 <?php
+	
+		$kiekLyg = 0;
+		for($i = 0; $i < $kiek; $i++){
+        	$Priekis[$i] = substr($sk[$i], 0, -1);
+            $Vidurys[$i] = substr($sk[$i], 1, -1);
+            $Galas[$i] = substr($sk[$i], -1);
+            $Galas[$i] + $Priekis[$i] + $Vidurys[$i];
+            echo $suma[$i];
+            if($Galas[$i] + $Priekis[$i] + $Vidurys[$i] > 9 && $Priekis[$i] % 2 ==0 && $Vidurys[$i] % 2 == 0 && $Galas[$i] % 2 == 0)
+            $kiekLyg++;
+		}
+		echo '<br> Sekoje yra '.$kiekLyg.' skaiciu, kuriu suma yra dviženklis skaicius ir skaicius sudarytas iš lyginiu skaitmenu</p>';
+     
+	 ?>
+
+
+
+
+
+kolegos kas sita 7 varianto pirma sudare? gal galetumet pasidalinti.. ? Ignas :)
+
+sharing is good guys
+
+
+
+
+
+
+
+
+
+
+
+8 variantas uzduotys (tiek pat kiek 7 dabar)
+
+1.
+
+<!DOCTYPE HTML>
+<html lang="lt">
+	<head>
+		<title>1.</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+     
+	 <h3>Sugeneruota skaiciu seka:</h3>
+	 <?php
+		$kiek = 100;
+		$sk = array(); // sukuriamas tuscias masyvas
+		for($i = 0; $i < $kiek; $i++){
+			$sk[$i] = rand(100, 999);
+		}
+		echo ' <p>';
+		for($i = 0; $i < $kiek; $i++){
+			echo $sk[$i].'; ';
+		}
+		echo '<br> Is viso '.$kiek.' sekos nariu </p>';
+	 ?>
+ 
+8 variantas 1 uzduotys (neveikia:)) bet ideja tokia
+
+<?php
+    $mas = array();
+    $digits = "";
+    for($i = 1; $i <= 100; $i++){
+        $mas[$i] = rand(100,999); 
+        echo $mas[$i].';  <br>';
+        $digits .= $mas[$i];
+        //$digits = $digits.$mas[$i];
+        echo 'Skaiciaus 1 skaitmuo yra: '.$digits[0].'; ';
+        echo 'Skaiciaus 2 skaitmuo yra: '.$digits[1].'; ';
+        echo 'Skaiciaus 3 skaitmuo yra: '.$digits[2].'; <br>';
+        }
+//        echo 'Skaiciaus 1 skaitmuo yra: '.$digits[0]'; ';
+//        echo 'Skaiciaus 2 skaitmuo yra: '.$digits[1]'; ';
+//        echo 'Skaiciaus 3 skaitmuo yra: '.$digits[2]'; <br>';
+     function arLygi ($digits){
+        $kiek = 0;
+        for($i = 1; $i <= 100; $i++){
+        if($digits[0] + $digits[2] == $digits[2] ){
+             $kiek += $i;
+             echo $digits;
+         }
+        }
+          echo $kiek;
+         if ($kiek > 0) { 
+             return true;  
+             } 
+         else { 
+             return false;  
+    }
+     }
+    
+    ?>
+
+2uzd varianto?
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antra uzduotis</title>
+</head>
+
+<body>
+          <?php
+        $kiek =0;
+        $a = "";
+        $b = "";
+        $n = "";
+        if(isset($_POST["calBtn"])){
+            $a = $_POST["a"];
+            $b = $_POST["b"];
+            $n = $_POST["n"];
+            $kiek = $a+$b*$n;
+        }
+        ?>
+    <form method="post">
+        <h2>Po <?=$n?> dienu, akvariume bus <?=$kiek?> zuvu</h2>
+        <label for="fname">Kiek zuvu yra akvariume?</label><br>
+        <input type="text" value="<?=$a?>" name="a"><br>
+        <label for="fname">Kiek i akvariuma idedama zuvu?</label><br>
+        <input type="text" value="<?=$b?>" name="b"><br>
+        <label for="fname">n dienu</label><br>
+        <input type="text" value="<?=$n?>" name="n"><br>
+        <input type="submit" name="calBtn" ><br>
+    </form>
+</body>
+</html>
+
+
+			8variantas 1 uzd randa prieki ir gala
+
+<!DOCTYPE HTML>
+<html lang="lt">
+	<head>
+		<title>1.</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+     
+	 <h3>Sugeneruota skaiciu seka:</h3>
+	 <?php
+		$kiek = 100;
+		$sk = array(); // sukuriamas tuscias masyvas
+        $Priekis = array();
+        $Galas = array();
+		for($i = 0; $i < $kiek; $i++)
+        {
+			$sk[$i] = rand(100, 999);
+            echo $sk[$i]. "  ";
+		}
+        
+		echo ' <p>';
+        		for($i = 0; $i < $kiek; $i++)
+                {
+                    $Priekis[$i] =substr($sk[$i], 0, 1);//Gaunamas priekis skaiciaus
+                    $Galas[$i] =substr($sk[$i], -1);//... Galas
+                    echo $Priekis[$i]." Priekis ";
+                    echo $Galas[$i]." Galas ";
+                    
+				}
+
+	 ?>
+</body>
+</html>
